@@ -83,7 +83,6 @@ https://\b.*wixstatic\b.*?gif url 302 https://limbopro.xyz/usr/uploads/2020/10/2
 
 
 ##### pornhub.hub
-#^https://\b((?!cn\.)\w{2,3})\.pornhub\.com(.*) url 302 https://cn.pornhub.com/
 ^https:?/\/.*?\.pornhub\.com\/.*/ads.*?ads.* url reject
 ^https:?/\/.*?\.pornhub\.com\/js/ht.js.* url reject
 ^https:?/\/.*?\.phncdn\.com.*?\/js\/vmobile/atatus.js\?.* url reject
