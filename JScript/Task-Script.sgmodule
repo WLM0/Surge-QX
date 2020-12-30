@@ -22,4 +22,4 @@
 京东抽奖机 = type=cron,cronexp=11 1 * * *,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js,script-update-interval=0
 
 [MITM]
-hostname = api.m.jd.com
+hostname = %APPEND% api.m.jd.com
