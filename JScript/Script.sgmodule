@@ -2,6 +2,8 @@
 #!desc=js
 
 [Script]
+#WeChat
+http-request ^https://mp\.weixin\.qq\.com/mp/getappmsgad script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/WeChat.js
 #Bilibili换区
 Bili Region = type=http-response,pattern=https:\/\/api\.bilibili\.com\/pgc\/view\/(v\d\/)?app\/season\?access_key,requires-body=1,max-size=0,control-api=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js,tag=Bilibili换区
 #tb_price_lite
@@ -20,6 +22,8 @@ http-response ^https?:\/\/account\.wps\.cn\/api\/users requires-body=1,max-size=
 http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js,tag=CamScanner
 #BaiduCloud_Speed
 http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js,tag=BaiduCloud_Speed
+#CaiYun
+ 彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/caiyun.js,tag=CaiYun
 
 [MITM]
-hostname = api.bilibili.com,trade-acs.m.taobao.com,api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,api.bilibili.com,account.wps.cn,ap*.intsig.net,pan.baidu.com
+hostname = api.bilibili.com,trade-acs.m.taobao.com,api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,api.bilibili.com,account.wps.cn,ap*.intsig.net,pan.baidu.com,mp.weixin.qq.com,biz.caiyunapp.com
