@@ -2,7 +2,9 @@
 #!desc=AD_advertising
 [Script]
 #BilibiliHD
-http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Sunert/Scripts/master/Script/BiliHD.js
+
+http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js,tag=Bilipj
+
 #WeChat
 http-request ^https://mp\.weixin\.qq\.com/mp/getappmsgad script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/WeChat.js,tag=WeChat_Ad
 #Bilibili换区
