@@ -7,9 +7,6 @@ Bili Region = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc
 http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js,tag=Bilipj
 #WeChat
 http-request ^https://mp\.weixin\.qq\.com/mp/getappmsgad script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/WeChat.js,tag=WeChat_Ad
-#微博去广告
-http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js,tag=Wb_AD
-http-response ^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js,tag=Wb_AD
 #Wps
 http-response ^https?:\/\/account\.wps\.cn\/api\/users requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js,tag=Wps
 #CamScanner
@@ -18,10 +15,6 @@ http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\
 http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js,tag=BaiduCloud_Speed
 #CaiYun
 彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/caiyun.js
-#奈飞评分
-http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js, tag=奈飞评分1
-http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js, tag=奈飞评分2
-http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/warmer/.+type=show-ath requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating_season.js, tag=单集评分
 #小小影视
 http-response https:\/\/.*\..*\.com\/(ssp-svr\/ssp\/list3|ucp/index) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xxys.js, tag=小小影视
 #人人影视
@@ -34,4 +27,4 @@ http-response ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail\?(.+
 http-response https://r.51wnl-cq.com/Api/User/GetExtInfo requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/wnl.js
 
 [MITM]
-hostname = %APPEND% api.bilibili.com, trade-acs.m.taobao.com, api.m.jd.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, account.wps.cn, ap*.intsig.net, pan.baidu.com, mp.weixin.qq.com, biz.caiyunapp.com, ios.prod.ftl.netflix.com, *.xxjjappss.com, *.huaerdadi.com, api.rr.tv, *.51wnl-cq.com, ap?.bilibili.com
+hostname = %APPEND% api.bilibili.com,account.wps.cn, ap*.intsig.net, pan.baidu.com, mp.weixin.qq.com, biz.caiyunapp.com, *.xxjjappss.com, *.huaerdadi.com, api.rr.tv, *.51wnl-cq.com, ap?.bilibili.com
