@@ -11,5 +11,9 @@ http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\
 http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js,tag=BaiduCloud_Speed
 #CaiYun
 彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/caiyun.js
+#微博
+http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
+http-response ^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info|remind/unread_count) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
+
 [MITM]
-hostname = %APPEND% api.bilibili.com,account.wps.cn, ap*.intsig.net, pan.baidu.com, mp.weixin.qq.com, biz.caiyunapp.com, *.xxjjappss.com, *.huaerdadi.com, api.rr.tv, *.51wnl-cq.com, ap?.bilibili.com
+hostname = %APPEND% api.bilibili.com,account.wps.cn, ap*.intsig.net, pan.baidu.com, mp.weixin.qq.com, biz.caiyunapp.com, *.xxjjappss.com, *.huaerdadi.com, *.51wnl-cq.com, ap?.bilibili.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com
